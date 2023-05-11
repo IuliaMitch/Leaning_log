@@ -18,3 +18,22 @@ apenas um objeto: t = Topic.objects.get(id=3)
 ver o texto: t.text
 data time: t.date_added
 ver as entradas: t.entry_set.all()
+
+Sintaxe para utlizar python em html: {% %}
+
+Utilizamos extends para poder passar o conteudo
+de um component pai para um component filho
+por exemplo o que fizemos: 
+{% extends "learning_logs/base.html" %}
+
+e podemos usar o block para o conteudo
+do componente filho ser exibido 
+no componente principal pai como exemplo:
+ {% block content %}
+    <div>
+      <h2>Isso é uma pagina HTML com back-end gerado totalmente em python</h2>
+      <p>
+        Prazer, meu nome é iulia e estou estudando desenvolvimento web em python
+      </p>
+    </div>
+    {% endblock content%} 
