@@ -1,0 +1,20 @@
+iniciar o projeto django = python -m venv ll_env
+ativar o ambiente virtual = . ll_env/Scripts/activate
+SAIR DO COMANDO VIRTUAL = deactivate
+instalndo django = pip install Django
+startar projeto = django-admin startproject Learning_log .
+migrate do database = python manage.py migrate
+rodar o server do database = ** runserver
+create app in database = ** startapp 'name'
+create model in database =  python .\manage.py makemigrations learning_logs
+docs.djangoproject.com
+Abrir shell integrado = python manage.py
+>>> from learning_logs.models import Topic
+>>> Topic.objects.all() 
+
+pegar todos os atributos: topics = Topic.objects.all()
+
+apenas um objeto: t = Topic.objects.get(id=3)
+ver o texto: t.text
+data time: t.date_added
+ver as entradas: t.entry_set.all()
